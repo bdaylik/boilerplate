@@ -1,0 +1,38 @@
+{{>header}}
+<div class="container">
+    <div class="row span4 offset4">
+        <form class="form-horizontal" method="POST" action="{{>INDEX_URL}}login">
+            <fieldset>
+                <legend>Lütfen Login olun</legend>
+                {{#errorMessage}}
+                <div class="alert alert-error">
+                    <button class="close" data-dismiss="alert">×</button>
+                    {{errorMessage}}
+                </div>
+                {{/errorMessage}}
+                {{#loggedOut}}
+                <div class="alert alert-success">
+                    <button class="close" data-dismiss="alert">×</button>
+                    Çıkış yaptınız.
+                </div>
+                {{/loggedOut}}
+                <div class="control-group{{#errorMessage}} error{{/errorMessage}}">
+                    <label class="control-label" for="username">Kullanıcı Adı</label>
+                    <div class="controls">
+                        <input class="span2" type="text" id="username" value="{{username}}" name="username" placeholder="Kullanıcı Adı"/>
+                    </div>
+                </div>
+                <div class="control-group{{#errorMessage}} error{{/errorMessage}}">
+                    <label class="control-label" for="password">Şifre</label>
+                    <div class="controls">
+                        <input class="span2" type="password" id="password" value="{{password}}" name="password" placeholder="Şifre"/>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Giriş Yap</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
+{{>footer}}

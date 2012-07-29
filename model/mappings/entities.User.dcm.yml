@@ -1,0 +1,30 @@
+entities\User:
+  type: entity
+  table: user
+  id:
+    username:
+      type: string
+      length: 255
+      nullable: false
+  fields:
+    password:
+      type: string
+      length: 40
+      nullable: false
+    name:
+      type: string
+      length: 255
+      nullable: false
+    surname:
+      type: string
+      length: 255
+      nullable: false
+    email:
+      type: string
+      length: 255
+      nullable: false
+    role:
+      type: string
+      length: 255
+      nullable: false
+
